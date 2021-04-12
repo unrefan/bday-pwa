@@ -1,23 +1,26 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
+  <main>
+    <app-header></app-header>
+    <app-menu></app-menu>
+    <router-view></router-view>
+  </main>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import HelloWorld from './components/HelloWorld.vue'
+import AppMenu from './components/AppMenu.vue'
+import AppHeader from './components/AppHeader.vue'
 
 export default defineComponent({
   name: 'App',
   components: {
-    HelloWorld
+    AppMenu,
+    AppHeader,
   }
 })
 </script>
 
 <style>
-
-
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
