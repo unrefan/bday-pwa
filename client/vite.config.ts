@@ -1,6 +1,8 @@
+import * as path from 'path'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import { VitePWA } from 'vite-plugin-pwa'
+import pkg from './package.json'
 
 export default defineConfig({
   plugins: [
@@ -30,5 +32,13 @@ export default defineConfig({
         "description": "Birthdays information",
       },
     }),
-  ]
+  ],
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src'),
+    },
+  },
+  define: {
+    _APP_VERSION: JSON.stringify(pkg.version),
+  },
 })
