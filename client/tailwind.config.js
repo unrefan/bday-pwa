@@ -2,7 +2,14 @@ module.exports = {
   purge: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      gridTemplateColumns: {
+       'layout': '50px repeat(11, minmax(0, 1fr))',
+      },
+      gridTemplateRows: {
+        'layout': '40px minmax(calc(100vh - 40px), 1fr)'
+      }
+    },
   },
   variants: {
     extend: {},
