@@ -51,13 +51,13 @@ export default defineComponent({
     },
     async getContacts() {
       try {
-        const contacts = await navigator.contacts.select(this.props, this.opts);
-        this.handleResults(contacts);
+        const navigator = window.navigator as any;
+        this.handleResults(await navigator.contacts.select(this.props, this.opts));
       } catch (ex) {
         console.error(ex);
       }
     },
-    handleResults(contacts) {
+    handleResults(contacts: Array<Record<string, any>>) {
       console.log(contacts);
     }
   }
