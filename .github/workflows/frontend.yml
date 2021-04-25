@@ -10,11 +10,9 @@ jobs:
       - name: Checkout 🛎️
         uses: actions/checkout@v2
 
-      - name: Navigate to client dir
-        run: cd ./client
-
       - name: Install and Build
         run: |
+          cd client
           yarn install
           yarn build
 
@@ -22,4 +20,4 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
           branch: gh-pages
-          folder: dist
+          folder: /client/dist
