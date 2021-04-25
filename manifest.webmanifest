@@ -1,1 +1,1 @@
-{"name":"Remember bdays","short_name":"Bdays","start_url":"/?source=pwa","display":"standalone","background_color":"#3367D6","lang":"en","scope":"/","icons":[],"theme_color":"#3367D6","description":"Birthdays information"}
+{"name":"cbdn","short_name":"cbdn","start_url":"./","display":"standalone","background_color":"#ffffff","lang":"en","scope":"./"}
